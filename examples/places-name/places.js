@@ -1,6 +1,6 @@
 const loadPlaces = function (coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
-    //const method = 'api';
+    const method = 'api';
 
     const PLACES = [
         {
@@ -22,9 +22,9 @@ const loadPlaces = function (coords) {
 // getting places from REST APIs
 function loadPlaceFromAPIs(position) {
     const params = {
-        radius: 300,    // search places not farther than this value (in meters)
-        clientId: 'HZIJGI4COHQ4AI45QXKCDFJWFJ1SFHYDFCCWKPIJDWHLVQVZ',
-        clientSecret: 'QWT2HBMQ1LUC4BYQHZWO2UQNEEANJENUIMYBG4JH32AC1OGA',
+        radius: 3000,    // search places not farther than this value (in meters)
+        clientId: 'B2OTPAFNL4X5P10BDHHPS5WIOLNEQGPRSUWN0GKORUFBHS3A',
+        clientSecret: 'WZOJITLXNLIPKEJVGWZA2JMOTHXCHLKDGPP43TLDBWOIV31D',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
     };
 
