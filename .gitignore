@@ -1,3 +1,5 @@
-node_modules/
-.secrets
-docs/*.gif
+.DS_Store
+.atom-live-server.json
+node_modules/*
+aframe/build/*.txt
+three.js/build/*.txt
