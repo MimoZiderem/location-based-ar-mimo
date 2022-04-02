@@ -6,8 +6,8 @@ const loadPlaces = function(coords) {
         {
             name: "La casa de Mimo",
             location: {
-                lat: 19.452241, // add here latitude if using static data
-                lng: -99133804, // add here longitude if using static data
+                lat: 19.451613, // add here latitude if using static data
+                lng: -99133080, // add here longitude if using static data
 
             }
         },
