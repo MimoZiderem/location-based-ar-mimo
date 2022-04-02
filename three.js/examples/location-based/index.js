@@ -10,7 +10,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#canvas1') });
 
-const geom = new THREE.BoxGeometry(20,20,20);
+const geom = new THREE.BoxGeometry(200,200,200);
 
 const threex = new THREEx.LocationBased(scene, camera);
 
@@ -109,6 +109,6 @@ function setupObjects(longitude, latitude) {
     const material4 = new THREE.MeshBasicMaterial({color: 0x00ff00});
     threex.add(new THREE.Mesh(geom, material), 19.452108, -99.133170 + 0.001); // slightly north
     threex.add(new THREE.Mesh(geom, material2), 19.452108, -99.133170 - 0.001); // slightly south
-    //threex.add(new THREE.Mesh(geom, material3), 19.452108 - 0.001, -99.133170); // slightly west
+    threex.add(new THREE.Mesh(geom, material3), 19.452108 - 0.001, -99.133170); // slightly west
     threex.add(new THREE.Mesh(geom, material4), 19.452108 + 0.001, -99.133170); // slightly east
 }
