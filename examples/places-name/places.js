@@ -4,7 +4,7 @@ const loadPlaces = function (coords) {
 
     const PLACES = [
         {
-            name: "Your place name",
+            name: "La casa de Mimo",
             location: {
                 lat: 19.451613, // add here latitude if using static data
                 lng: -99133080, // add here longitude if using static data
