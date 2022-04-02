@@ -109,6 +109,6 @@ function setupObjects(longitude, latitude) {
     const material4 = new THREE.MeshBasicMaterial({color: 0x00ff00});
     threex.add(new THREE.Mesh(geom, material), 19.452108, -99.133170 + 0.001); // slightly north
     threex.add(new THREE.Mesh(geom, material2), 19.452108, -99.133170 - 0.001); // slightly south
-    threex.add(new THREE.Mesh(geom, material3), 19.452108 - 0.001, -99.133170); // slightly west
+    //threex.add(new THREE.Mesh(geom, material3), 19.452108 - 0.001, -99.133170); // slightly west
     threex.add(new THREE.Mesh(geom, material4), 19.452108 + 0.001, -99.133170); // slightly east
 }
