@@ -1,43 +1,22 @@
+<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>GeoARThreeJSV7 demo</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+</head>
 
-    <script>
-        const log = console.log;
-        window.onload = () => {
-          let scene = document.querySelector('a-scene'); /* Apply to whole scene */
-    
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function (position) {
-              let gps = document.createAttribute('gps-entity-place'),
-                arjs = document.createAttribute('arjs'),
-                welcome = document.getElementById('welcome');
-    
-              arjs.value = 'sourceType: webcam; sourceWidth: 1280; sourceHeight: 960; trackingMethod: best; debugUIEnabled: false;';
-              gps.value = `latitude: ${position.coords.latitude - 0.001}; longitude: ${position.coords.longitude + 0.001}`;
-              log(gps.value);
-              scene.setAttributeNode(gps); /* Apply to whole scene */
-              scene.setAttributeNode(arjs);
-            });
-          }
-    
-        };
-      </script>
-  </head>
+<body>
+    <video id='video1' autoplay playsinline style='display:none'></video>
+    <canvas id="canvas1" style='background-color: black; width:100%; height:100%; display:block'></canvas>
+    <script src='../vendor/three.js/build/three.js'></script>
+    <script src="../../build/ar-threex-location-only.js"></script>
+    <script src="index.js"></script>
+</body>
 
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene
-      vr-mode-ui="enabled: false"
-      embedded
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-    >
-      <a-box color="yellow" gps-projected-entity-place="latitude: 19.4520742; longitude: -991333051" position="0 30 0"/>  
-      <a-camera id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader> </a-camera>
-    </a-scene>
-  </body>
 </html>
