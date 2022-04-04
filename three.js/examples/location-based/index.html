@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>GeoARThreeJSV5 demo</title>
+    <title>GeoARThreeJSV7 demo</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -37,7 +37,6 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     >
       <a-box color="yellow" gps-projected-entity-place="latitude: 19.4520742; longitude: -991333051" position="0 30 0"/>  
-      <a-camera gps-projected-camera rotation-reader></a-camera>
       <a-camera id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader> </a-camera>
     </a-scene>
   </body>
