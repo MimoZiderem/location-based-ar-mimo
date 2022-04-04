@@ -34,9 +34,9 @@
         }
         
         function showPosition(position) {
-          x.innerHTML = "Latitude: " + position.coords.latitude +
-          "<br>Longitude: " + position.coords.longitude;
-        document.getElementById("gpsModel").setAttribute("gps-entity-place","longitude:" + position.coords.longitude + "; latitude: " + position.coords.latitude + ";")
+            console.log(position);
+            x.innerHTML = "Latitude: " + position.coords.latitude +"<br>Longitude: " + position.coords.longitude;
+            document.getElementById("gpsModel").setAttribute("gps-entity-place","longitude:" + position.coords.latitude + "; latitude: " + position.coords.longitude + ";")
         }
         window.onload = function(){getLocation()};
     </script>
