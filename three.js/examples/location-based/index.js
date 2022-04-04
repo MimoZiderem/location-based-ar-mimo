@@ -16,7 +16,7 @@ const threex = new THREEx.LocationBased(scene, camera);
 
 // You can change the minimum GPS accuracy needed to register a position - by default 1000m
 //const threex = new THREEx.LocationBased(scene, camera. { gpsMinAccuracy: 30 } );
-const cam = new THREEx.WebcamRenderer(renderer, '#video1');
+const cam = new THREEx.WebcamRenderer(renderer, '#camera1');
 
 const oneDegAsRad = THREE.Math.degToRad(1);
 
