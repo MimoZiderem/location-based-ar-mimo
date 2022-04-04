@@ -21,7 +21,7 @@
         
         <a-camera gps-camera rotation-reader></a-camera>
 
-        <a-entity gltf-model="assets/magnemite/scene.gltf" rotation="0 0 0" scale="0.10 0.10 0.10" gps-entity-place="longitude: 19.47576716766868; latitude: -99.1247149945981;"/>
+        <a-entity id="gpsModel" gltf-model="assets/magnemite/scene.gltf" rotation="0 0 0" scale="0.10 0.10 0.10" gps-entity-place="longitude: 19.47576716766868; latitude: -99.1247149945981;"/>
 	</a-scene>
     <script>
         var x = document.getElementById("gpscoord");
@@ -36,6 +36,7 @@
         function showPosition(position) {
           x.innerHTML = "Latitude: " + position.coords.latitude +
           "<br>Longitude: " + position.coords.longitude;
+        document.getElementById("gpsModel").setAttribute("gps-entity-place","longitude:" + position.coords.longitude + "; latitude: " + position.coords.latitude + ";")
         }
         window.onload = function(){getLocation()};
     </script>
