@@ -1,23 +1,26 @@
-<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
-    </style>
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GeoARThreeJSV2 demo</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
 
-<body>
-    <video id='video1' autoplay playsinline style='display:none'></video>
-    <canvas id="canvas1" style='background-color: black; width:100%; height:100%; display:block'></canvas>
-    <title>GeoARThreeJS.js demo V1</title>
-    <script src='../vendor/three.js/build/three.js'></script>
-    <script src="../../build/ar-threex-location-only.js"></script>
-    <script src="index.js"></script>
-</body>
-
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-text
+        value="This content will always face you."
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 19.4520742; longitude: -991333051;"
+      ></a-text>
+      <a-camera gps-camera rotation-reader> </a-camera>
+    </a-scene>
+  </body>
 </html>
